@@ -32,18 +32,21 @@
     <main>
         <section class="bg-[url('/images/background.png')] bg-center bg-no-repeat min-h-screen]">
             <!-- Starting Interface -->
-            <div class="flex flex-col items-center justify-center min-h-screen gap-y-10 hidden">
+            <div class="flex flex-col items-center justify-center min-h-screen gap-y-10">
                 <h1 class="text-white font-Anton font-normal text-4xl md:text-7xl lg:text-8xl">Typing Speed Tester</h1>
                 <p class="font-Poppins font-medium text-[#FFFFFF] text-lg md:text-3xl lg:text-4xl">Press the "Play Now"
                     button</p>
-                <button class="btn font-Poppins font-semibold lg:text-2xl text-green-800" onclick="PlayStart()">Play
+                <button class="btn font-Poppins font-semibold lg:text-2xl text-green-800">Play
                     Now</button>
             </div>
 
             <!-- playing field -->
             <div class="flex flex-col items-center justify-center min-h-screen gap-y-10 hidden">
                 <div
-                    class="flex justify-center items-center h-40 min-w-[340px] sm:h-44 sm:min-w-[500px] md:h-56 md:min-w-[600px] lg:h-70 lg:w-[850px] border-[#010313bb] border-[15px] rounded-md bg-[#ffffffb1] text-[#010313] font-Poppins font-semibold lg:text-4xl">
+                    class="flex justify-center items-center h-40 min-w-[340px] sm:h-44 sm:min-w-[500px] md:h-56 md:min-w-[600px] lg:h-70 lg:w-[850px] border-[#010313bb] border-[15px] rounded-md bg-[#ffffffb1] text-[#010313] font-Poppins font-semibold lg:text-4xl relative">
+                    <p
+                        class="text-[10px] sm:text-xs md:text-sm lg:text-base text-white absolute top-0 bg-[#2F2941] px-4 py-1 rounded-tl-sm rounded-tr-sm rounded-xl">
+                        Please, don't look at the keyboard while typing</p>
                 </div>
                 <div class="font-Inter font-medium text-xs sm:text-sm md:text-xl lg:text-xl">
                     <div class="flex justify-center gap-1 my-1 w-full">
@@ -87,12 +90,12 @@
                         <span>5</span></button>
                     <button class="flex items-center gap-[5px] bg-[#206e63] px-7 py-3 rounded-[30px]">Score
                         <img src="images/score.png" alt="">
-                        <span>100</span></button>
+                        <span>0</span></button>
                 </div>
             </div>
 
             <!-- Score Board -->
-            <div class="flex flex-col items-center justify-center min-h-screen gap-y-10">
+            <div class="flex flex-col items-center justify-center min-h-screen gap-y-10 hidden">
                 <div
                     class="text-center  text-white bg-gradient-to-t from-[#75343489] to-[#05906fcc] font-Poppins px-12 py-11 rounded-2xl">
                     <h1 class="font-extrabold text-4xl mb-4">Score: <span class="font-medium">0</span></h1>

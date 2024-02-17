@@ -32,55 +32,55 @@
     <main>
         <section class="bg-[url('/images/background.png')] bg-center bg-no-repeat min-h-screen]">
             <!-- Starting Interface -->
-            <div class="flex flex-col items-center justify-center min-h-screen gap-y-10">
+            <div class="flex flex-col items-center justify-center min-h-screen gap-y-10" id="startInterface">
                 <h1 class="text-white font-Anton font-normal text-4xl md:text-7xl lg:text-8xl">Typing Speed Tester</h1>
                 <p class="font-Poppins font-medium text-[#FFFFFF] text-lg md:text-3xl lg:text-4xl">Press the "Play Now"
                     button</p>
-                <button class="btn font-Poppins font-semibold lg:text-2xl text-green-800">Play
+                <button class="btn font-Poppins font-semibold lg:text-2xl text-green-800" onclick="startGame()">Play
                     Now</button>
             </div>
 
             <!-- playing field -->
-            <div class="flex flex-col items-center justify-center min-h-screen gap-y-10 hidden">
+            <div class="flex flex-col items-center justify-center min-h-screen gap-y-10 hidden" id="playingField">
                 <div
                     class="flex justify-center items-center h-40 min-w-[340px] sm:h-44 sm:min-w-[500px] md:h-56 md:min-w-[600px] lg:h-70 lg:w-[850px] border-[#010313bb] border-[15px] rounded-md bg-[#ffffffb1] text-[#010313] font-Poppins font-semibold lg:text-4xl relative">
+                    <span id="display"></span>
                     <p
                         class="text-[10px] sm:text-xs md:text-sm lg:text-base text-white absolute top-0 bg-[#2F2941] px-4 py-1 rounded-tl-sm rounded-tr-sm rounded-xl">
                         Please, don't look at the keyboard while typing</p>
                 </div>
                 <div class="font-Inter font-medium text-xs sm:text-sm md:text-xl lg:text-xl">
                     <div class="flex justify-center gap-1 my-1 w-full">
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">q</kbd>
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">w</kbd>
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">e</kbd>
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">r</kbd>
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">t</kbd>
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">y</kbd>
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">u</kbd>
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">i</kbd>
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">o</kbd>
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">p</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('q')" id="q">q</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('w')" id="w">w</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('e')" id="e">e</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('r')" id="r">r</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('t')" id="t">t</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('y')" id="y">y</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('u')" id="u">u</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('i')" id="i">i</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('o')" id="o">o</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('p')" id="p">p</kbd>
                     </div>
                     <div class="flex justify-center gap-1 my-1 w-full">
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">a</kbd>
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">s</kbd>
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">d</kbd>
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">f</kbd>
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">g</kbd>
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">h</kbd>
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">j</kbd>
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">k</kbd>
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">l</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('a')" id="a">a</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('s')" id="s">s</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('d')" id="d">d</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('f')" id="f">f</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('g')" id="g">g</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('h')" id="h">h</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('j')" id="j">j</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('k')" id="k">k</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('l')" id="l">l</kbd>
                     </div>
                     <div class="flex justify-center gap-1 my-1 w-full">
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">z</kbd>
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">x</kbd>
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">c</kbd>
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">v</kbd>
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">b</kbd>
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">n</kbd>
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">m</kbd>
-                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">/</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('z')" id="z">z</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('x')" id="x">x</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('c')" id="c">c</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('v')" id="v">v</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('b')" id="b">b</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('n')" id="n">n</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300" onclick="pressedKeyValue('m')" id="m">m</kbd>
                     </div>
                 </div>
                 <div
@@ -95,7 +95,7 @@
             </div>
 
             <!-- Score Board -->
-            <div class="flex flex-col items-center justify-center min-h-screen gap-y-10 hidden">
+            <div class="flex flex-col items-center justify-center min-h-screen gap-y-10 hidden" id="scoreBoard">
                 <div
                     class="text-center  text-white bg-gradient-to-t from-[#75343489] to-[#05906fcc] font-Poppins px-12 py-11 rounded-2xl">
                     <h1 class="font-extrabold text-4xl mb-4">Score: <span class="font-medium">0</span></h1>
@@ -109,6 +109,5 @@
 </body>
 
 <script src="script/script.js"></script>
-<script src="script/utilities.js"></script>
 
 </html>

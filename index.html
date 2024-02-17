@@ -32,12 +32,63 @@
     <main>
         <section class="bg-[url('/images/background.png')] bg-center bg-no-repeat min-h-screen]">
             <!-- Starting Interface -->
-            <div class="flex flex-col items-center justify-center min-h-screen gap-y-10">
+            <div class="flex flex-col items-center justify-center min-h-screen gap-y-10 hidden">
                 <h1 class="text-white font-Anton font-normal text-4xl md:text-7xl lg:text-8xl">Typing Speed Tester</h1>
                 <p class="font-Poppins font-medium text-[#FFFFFF] text-lg md:text-3xl lg:text-4xl">Press the "Play Now"
                     button</p>
                 <button class="btn font-Poppins font-semibold lg:text-2xl text-green-800" onclick="PlayStart()">Play
                     Now</button>
+            </div>
+
+            <!-- playing field -->
+            <div class="flex flex-col items-center justify-center min-h-screen gap-y-10">
+                <div
+                    class="flex justify-center items-center h-40 min-w-[340px] sm:h-44 sm:min-w-[500px] md:h-56 md:min-w-[600px] lg:h-70 lg:w-[850px] border-[#010313bb] border-[15px] rounded-md bg-[#ffffffb1] text-[#010313] font-Poppins font-semibold lg:text-4xl">
+                </div>
+                <div class="font-Inter font-medium text-xs sm:text-sm md:text-xl lg:text-xl">
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">q</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">w</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">e</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">r</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">t</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">y</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">u</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">i</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">o</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">p</kbd>
+                    </div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">a</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">s</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">d</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">f</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">g</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">h</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">j</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">k</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">l</kbd>
+                    </div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">z</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">x</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">c</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">v</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">b</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">n</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">m</kbd>
+                        <kbd class="kbd border hover:cursor-pointer hover:border-blue-300">/</kbd>
+                    </div>
+                </div>
+                <div
+                    class="text-[20px] text-white font-Inter font-medium flex gap-[40px] sm:gap-[250px] md:gap-[320px] lg:gap-[700px]">
+                    <button class="flex items-center gap-[5px] bg-[#894189] px-5 py-3 rounded-[30px]">Life
+                        <img src="images/life.png" alt="">
+                        <span>5</span></button>
+                    <button class="flex items-center gap-[5px] bg-[#206e63] px-7 py-3 rounded-[30px]">Score
+                        <img src="images/score.png" alt="">
+                        <span>100</span></button>
+                </div>
             </div>
         </section>
     </main>

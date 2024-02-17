@@ -41,7 +41,7 @@
             </div>
 
             <!-- playing field -->
-            <div class="flex flex-col items-center justify-center min-h-screen gap-y-10">
+            <div class="flex flex-col items-center justify-center min-h-screen gap-y-10 hidden">
                 <div
                     class="flex justify-center items-center h-40 min-w-[340px] sm:h-44 sm:min-w-[500px] md:h-56 md:min-w-[600px] lg:h-70 lg:w-[850px] border-[#010313bb] border-[15px] rounded-md bg-[#ffffffb1] text-[#010313] font-Poppins font-semibold lg:text-4xl">
                 </div>
@@ -88,6 +88,17 @@
                     <button class="flex items-center gap-[5px] bg-[#206e63] px-7 py-3 rounded-[30px]">Score
                         <img src="images/score.png" alt="">
                         <span>100</span></button>
+                </div>
+            </div>
+
+            <!-- Score Board -->
+            <div class="flex flex-col items-center justify-center min-h-screen gap-y-10">
+                <div
+                    class="text-center  text-white bg-gradient-to-t from-[#75343489] to-[#05906fcc] font-Poppins px-12 py-11 rounded-2xl">
+                    <h1 class="font-extrabold text-4xl mb-4">Score: <span class="font-medium">0</span></h1>
+                    <button class="btn font-Poppins font-semibold lg:text-2xl text-green-800 mb-4"
+                        onclick="PlayStart()">Play Again</button>
+                    <p>Practice Makes a man perfect</p>
                 </div>
             </div>
         </section>

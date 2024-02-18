@@ -87,10 +87,12 @@
                     class="text-[20px] text-white font-Inter font-medium flex gap-[40px] sm:gap-[250px] md:gap-[320px] lg:gap-[700px]">
                     <button class="flex items-center gap-[5px] bg-[#894189] px-5 py-3 rounded-[30px]">Life
                         <img src="images/life.png" alt="">
-                        <span>5</span></button>
+                        <span id="life">5</span>
+                    </button>
                     <button class="flex items-center gap-[5px] bg-[#206e63] px-7 py-3 rounded-[30px]">Score
                         <img src="images/score.png" alt="">
-                        <span>0</span></button>
+                        <span id="score">0</span>
+                    </button>
                 </div>
             </div>
 
@@ -98,9 +100,9 @@
             <div class="flex flex-col items-center justify-center min-h-screen gap-y-10 hidden" id="scoreBoard">
                 <div
                     class="text-center  text-white bg-gradient-to-t from-[#75343489] to-[#05906fcc] font-Poppins px-12 py-11 rounded-2xl">
-                    <h1 class="font-extrabold text-4xl mb-4">Score: <span class="font-medium">0</span></h1>
+                    <h1 class="font-extrabold text-4xl mb-4">Score: <span class="font-medium" id="SubTotalScore">0</span></h1>
                     <button class="btn font-Poppins font-semibold lg:text-2xl text-green-800 mb-4"
-                        onclick="PlayStart()">Play Again</button>
+                        onclick="startGame()">Play Again</button>
                     <p>Practice Makes a man perfect</p>
                 </div>
             </div>

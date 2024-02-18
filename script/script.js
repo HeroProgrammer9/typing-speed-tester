@@ -55,9 +55,8 @@ function generateLetter() {
 function pressedKeyValue(pressedKey) {
   if (displayLetter.innerText == pressedKey.toUpperCase()) {
     // remove hightlight the already checked letter
-    removeBackground(displayLetter.innerText.toLowerCase());
+    removeBackground(pressedKey);
     displayLetter.innerText = generateLetter().toUpperCase();
-
     Score.innerText = parseInt(Score.innerText) + 1;
 
     // hightlight the new matched key
@@ -65,8 +64,8 @@ function pressedKeyValue(pressedKey) {
   } else {
     Life.innerText = parseInt(Life.innerText) - 1;
     if (Life.innerText == 0) {
-      SubTotalScore.innerText =
-        parseInt(SubTotalScore.innerText) + parseInt(Score.innerText);
+      // set the SubTotal Score in scoreboard
+      SubTotalScore.innerText = Score.innerText;
       endGame();
     }
   }
@@ -76,10 +75,10 @@ function pressedKeyValue(pressedKey) {
 document.addEventListener("keyup", function (e) {
   if (e.key == "Escape") {
     endGame();
-    SubTotalScore.innerText =
-      parseInt(SubTotalScore.innerText) + parseInt(Score.innerText);
+    // set the SubTotal Score in scoreboard
+    SubTotalScore.innerText = Score.innerText;
   }
-  // check the keys are small letters 
+  // check the keys are small letters
   else if ((e.key = /^[a-z]+$/.test(e.key))) {
     pressedKeyValue(e.key);
   } else if (e.key == "CapsLock") {
